@@ -14,4 +14,7 @@
 .head h1{
     position: relative;
     top: 60px;
+    /* background-color: #fae8d2;
+    border-radius: 20px; */
+    color: #4a3823;
 }

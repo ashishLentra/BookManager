@@ -1,13 +1,17 @@
 .cardDiv{
     display: flex;
+    flex-wrap: wrap;
     padding: 2cm;
+    justify-content:baseline;
 }
 
 .card{
     margin: 1cm;
 }
 
-/* img{
-    height: 200px;
-    width: 300px;
-} */
+.set{
+    position: relative;
+    left: 5%;
+    right: 5%;
+    width: 90%
+}

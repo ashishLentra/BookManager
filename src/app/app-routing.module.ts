@@ -8,9 +8,9 @@ import { SignupComponent } from './signup/signup.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
 
 const routes: Routes = [
-  // {path: '', component:LoginComponent},
+  {path: '', component:LoginComponent},
   {path: 'signup', component:SignupComponent},
-  {path: '', component: BookListComponent},
+  // {path: '', component: BookListComponent},
   {path: 'allbooks', component: AllbooksComponent},
   {path: 'add-book', component: AddBookComponent},
   {path: 'book-list', component: BookListComponent},
