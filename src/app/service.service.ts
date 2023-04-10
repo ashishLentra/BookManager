@@ -22,7 +22,7 @@ export class ServiceService {
   }
 
   deleteBook(id: number){
-    return this.http.delete<any>('http://localhost:8080/deleteBook/'+id);
+     return this.http.delete<any>('http://localhost:8080/deleteBook/'+id);
   }
 
 }

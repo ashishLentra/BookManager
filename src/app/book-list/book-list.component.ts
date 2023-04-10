@@ -57,16 +57,15 @@ export class BookListComponent {
   // }
   toDeleteBook(id: number){
     this.service.deleteBook(id).subscribe(
-     
-      data=>{ console.log("Working Fine");
-      this.getBooks()
-      
-    },
+      res=>{
+        this.service.getBookList().subscribe(data=>{console.log("Recieved sucessfully"),
+        this.booklist = data;
+      })
+      },
+    
       
         error=> {console.log(error);
-         this.getBooks()}
-        
-    )
+         })
   }
 
 
