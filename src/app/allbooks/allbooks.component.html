@@ -1,0 +1,14 @@
+
+<div class="cardDiv">
+
+    <div *ngFor="let book of booklist" class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{book.imgUrl}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{book.title}}</h5>
+          <p class="card-text">{{book.author}}</p>
+          <a href="#" class="btn btn-primary">Edit</a>
+          <a href="#" class="btn btn-primary">Delete</a>
+        </div>
+      </div>
+
+</div>

@@ -1,0 +1,25 @@
+
+
+<form (ngSubmit)="updateBookForm()">
+    <div class="mb-3">
+      <label class="form-label">Id</label>
+      <input type="number" class="form-control" disabled [(ngModel)]="book.id" name="id">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Title</label>
+      <input type="text" class="form-control" [(ngModel)]="book.title" name="title">
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Image Url</label>
+      <input type="text" class="form-control" [(ngModel)]="book.imgUrl" name="imgUrl">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Author</label>
+        <input type="text"  class="form-control" [(ngModel)]="book.author" name="author">
+      </div>
+    <div class="mb-3">
+        <label class="form-label">Publication Year</label>
+        <input type="number"  class="form-control"  [(ngModel)]="book.publicationYear" name="publicationYear">
+    </div>
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>

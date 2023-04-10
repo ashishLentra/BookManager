@@ -1,0 +1,19 @@
+
+.gradient-custom {
+
+
+    background-image: url('https://images.pexels.com/photos/1370295/pexels-photo-1370295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    
+    position:relative;
+    top: 1rem;
+
+
+    }
+
+   .div{
+    padding: 0rem;
+   }
+   .top-gap{
+    position: relative;
+    top: 0px;
+   }
