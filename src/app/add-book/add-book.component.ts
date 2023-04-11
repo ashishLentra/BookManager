@@ -21,7 +21,7 @@ export class AddBookComponent {
 
   addBookForm(){
     this.service.addBook(this.book).subscribe(
-      data=> this.route.navigate(['book-list']) ,
+      data=> {this.route.navigate(['book-list']); alert("Book added Succesfully");} ,
       error=> console.log("exception occured")
     )
   }

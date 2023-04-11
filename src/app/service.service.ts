@@ -11,19 +11,24 @@ export class ServiceService {
   constructor(private http:HttpClient) { }
 
   getBookList(): Observable<any>{
-    return this.http.get<any>('http://localhost:8080/book');
+    return this.http.get<Book[]>('http://localhost:8080/book');
   }
   
   addBook(book: Book):Observable<any>{
-    return this.http.post<any>('http://localhost:8080/addBook', book);
+    return this.http.post<Book>('http://localhost:8080/addBook', book);
+  }
+
+  updateBook(book: Book):Observable<any>{
+    return this.http.put<Book>('http://localhost:8080/updateBook', book);
   }
 
   getBookById(id: number){
-    return this.http.get<any>('http://localhost:8080/book/'+id);
+    return this.http.get<Book>('http://localhost:8080/book/'+id);
   }
 
   deleteBook(id: number){
      return this.http.delete<any>('http://localhost:8080/deleteBook/'+id);
   }
+
 
 }

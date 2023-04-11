@@ -18,3 +18,23 @@
     border-radius: 20px; */
     color: #4a3823;
 }
+
+.position{
+    margin-top: 5px;
+    margin-bottom: 30px;
+}
+
+.newB{
+    background-color: #e6a352;
+    border: #4a3823;
+}
+
+.newB:hover{
+    background-color: black;
+}
+
+/* .table-data{
+    width: 90%;
+    height: auto;
+    overflow: scroll;
+} */

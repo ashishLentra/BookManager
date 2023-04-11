@@ -22,22 +22,29 @@ export class AllbooksComponent {
       error=>console.log("Exception occured")
     )
   }
-  toAddBook(){
-    this.router.navigate(['/add-book']);
-  }
 
-  toUpdateBook(id: Number){
-    this.router.navigate(['update-book', id])
-  }
 
-  toDeleteBook(id: number){
-    this.service.deleteBook(id).subscribe(
+  // toAddBook(){
+  //   this.router.navigate(['/add-book']);
+  // }
+
+  // toUpdateBook(id: Number){
+  //   this.router.navigate(['update-book', id])
+  // }
+
+  // toDeleteBook(id: number){
+  //   this.service.deleteBook(id).subscribe(
      
-      data=>{ console.log("cisabci");
-      this.router.navigate(['/book-list'])},
+  //     data=>{ console.log("cisabci");
+  //     this.router.navigate(['/book-list'])},
       
-        error=> {console.log("error occuredd")}
+  //       error=> {console.log("error occuredd")}
 
-    )
-  }
+  //   )
+  // }
+      toViewBook(id: number){
+        this.router.navigate(['view', id]);
+      }
+
+
 }

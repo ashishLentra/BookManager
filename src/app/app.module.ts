@@ -13,6 +13,7 @@ import { AllbooksComponent } from './allbooks/allbooks.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { SignupComponent } from './signup/signup.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

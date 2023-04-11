@@ -1,14 +1,16 @@
+<app-navbar></app-navbar>
+
 <div class="set">
 
   <div class="cardDiv">
   
-      <div *ngFor="let book of booklist" class="card" style="width: 18rem;">
+      <div *ngFor="let book of booklist" class="card shadow" style="width: 18rem;">
           <img class="card-img-top" src="{{book.imgUrl}}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{book.title}}</h5>
             <p class="card-text">{{book.author}}</p>
-            <a  class="btn btn-primary"  (click)="toUpdateBook(book.id)">Edit</a>&nbsp;
-            <a  class="btn btn-danger" (click)="toDeleteBook(book.id)">Delete</a>
+            <a  class="btn btn-primary"  (click)="toViewBook(book.id)">View</a>&nbsp;
+            <!-- <a  class="btn btn-danger" (click)="toDeleteBook(book.id)">Delete</a> -->
           </div>
         </div>
   

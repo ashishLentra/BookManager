@@ -23,6 +23,8 @@ export class LoginComponent {
         {
           if(this.arr[i].email===this.user.email && this.arr[i].password===this.user.password)
           {
+            sessionStorage.setItem('useremail',this.arr[i].email);
+            // sessionStorage.setItem("lastname", "Smith");
             this.route.navigate(['book-list']);
             return;
           }

@@ -1,17 +1,26 @@
 
 
+<app-navbar></app-navbar>
+
 <div class="head">
-  <h1 class="shadow"><b>MANAGE YOUR BOOKS HERE</b></h1>
+  <h1 ><b>WELCOME!  MANAGE YOUR BOOKS HERE</b></h1>
 </div>
 
 <div class="content">
-  <table class="table table-striped shadow">
+  <div>
+    <button type="button" id="btnAdd" class="btn btn-primary position newB" (click)="toAddBook()" >Add Book</button>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="searchTable" name="searchtable">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  <table class="table table-striped shadow scroll">
     <thead class="thead-dark">
     <tr>
 
       <th scope="col">ID</th>
-      <th >TITLE</th>
-      <th>IMAGE</th>
+      <th >IMAGE</th>
+      <th>TITLE</th>
       <th scope="col">AUTHOR</th>
       <th scope="col">PUBLICATION YEAR</th>
       <th>ACTIONS</th>
@@ -22,19 +31,19 @@
       <tr *ngIf="booklist.length ==0">
         <td colspan="5" style="text-align: center"><h2>There are no books yet</h2></td>
       </tr>
-    <tr *ngFor="let book of booklist">
+    <tr *ngFor="let book of booklist | filter: searchTable" >
       <th >{{book.id}}</th>
-      <td>{{book.title}}</td>
       <td><img class="imageInTable" src="{{book.imgUrl}}" alt="image"></td>
+      <td>{{book.title}}</td>
       <td>{{book.author}}</td>
       <td>{{book.publicationYear}}</td>
       <td>
-        <button type="button" class="btn btn-primary" (click)="toUpdateBook(book.id)">Edit</button>&nbsp;
+        <button type="button" class="btn btn-primary newB" (click)="toUpdateBook(book.id)">Edit</button>&nbsp;
         <button type="button" class="btn btn-danger" (click)="toDeleteBook(book.id)">Delete</button>
       </td>
     </tr>
     </tbody>
   </table>
-  <button type="button" id="btnAdd" class="btn btn-danger" (click)="toAddBook()" >Add Book</button>
+ 
 </div>
 

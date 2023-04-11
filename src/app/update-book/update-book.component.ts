@@ -23,10 +23,10 @@ export class UpdateBookComponent {
   }
 
   updateBookForm(){
-    this.service.addBook(this.book).subscribe(
+    this.service.updateBook(this.book).subscribe(
       data=> this.route.navigate(['book-list']),
       error=> console.log("error occured")
     )
-  }
+  } 
 
 }

@@ -6,6 +6,7 @@ import { BookListComponent } from './book-list/book-list.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { UpdateBookComponent } from './update-book/update-book.component';
+import { ViewComponent } from './view/view.component';
 
 const routes: Routes = [
   {path: '', component:LoginComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path: 'add-book', component: AddBookComponent},
   {path: 'book-list', component: BookListComponent},
   {path: 'update-book/:id', component: UpdateBookComponent},
+  {path:'view/:id', component: ViewComponent}
   
 ];
 

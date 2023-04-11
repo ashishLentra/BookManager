@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Book } from '../book';
 import { ServiceService } from '../service.service';
 import { Router } from '@angular/router';
+// import { User } from '../user';
+import { UserServiceService } from '../user-service.service';
 
 @Component({
   selector: 'app-book-list',
@@ -12,8 +14,10 @@ export class BookListComponent {
 
   // booklist = Book[];
   booklist: Array<Book> = [];
+  // user: User;
 
-  constructor(private service:ServiceService, private router: Router){}
+  constructor(private service:ServiceService, private router: Router, private userService: UserServiceService){}
+  searchTable: any;
 
   ngOnInit(){
 
@@ -24,6 +28,7 @@ export class BookListComponent {
     //   error=>console.log("Exception occured")
     // )
     this.getBooks();
+    // this.getUser();
   }
 
   getBooks(){
@@ -43,18 +48,6 @@ export class BookListComponent {
     this.router.navigate(['update-book', id])
   }
 
-  // toDeleteBook(id: number){
-  //   this.service.deleteBook(id).subscribe(
-     
-  //     data=>{ console.log("cisabci");
-      
-  //   },
-      
-  //       error=> {console.log("error occuredd");
-  //       this.getBooks()}
-
-  //   )
-  // }
   toDeleteBook(id: number){
     this.service.deleteBook(id).subscribe(
       res=>{
@@ -68,14 +61,12 @@ export class BookListComponent {
          })
   }
 
+  // getUser(){
+  //   this.userService.getUserList().subscribe(res=>{
+  //     console.log("getUser working");
 
-//   toDeleteBook(id: number) {
-//     if (confirm('Are you sure ?'))
-//   return this.service.deleteBook(id).subscribe(
-//     success =>{
-//       ("Product deleted succesfully");
-//     },
-//     error=> {console.log("Exception occured 2"); this.getBooks()}
-//    )
-//   }
+  //     this.user = res;
+  //   })
+  // }
+
 }
