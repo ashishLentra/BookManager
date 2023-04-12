@@ -32,6 +32,7 @@ export class BookListComponent {
   }
 
   getBooks(){
+    
       this.service.getBookList().subscribe(
       data=>{console.log("Recieved sucessfully"),
       this.booklist = data;

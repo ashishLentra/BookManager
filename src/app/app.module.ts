@@ -14,7 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-
+ 
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,3 +38,4 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+ 

@@ -14,7 +14,7 @@ export class SignupComponent {
   confirmPassword:string;
   constructor(private route:Router,private service:UserServiceService){}
 
-  handleSignUp(){
+  SignUp(){
     if(this.user.password!==this.confirmPassword)
     {
       alert("Password and confirm Password are not same");

@@ -27,6 +27,7 @@ export class NavbarComponent{
   }
 
   toLogIn(){
+    sessionStorage.removeItem('useremail');
     this.route.navigate(['']);
   }
 
