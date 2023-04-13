@@ -1,7 +1,7 @@
 
 
 <app-navbar></app-navbar>
-
+ 
 <div class="head">
   <h1 ><b>WELCOME!  MANAGE YOUR BOOKS HERE</b></h1>
 </div>
@@ -10,8 +10,7 @@
   <div>
     <button type="button" id="btnAdd" class="btn btn-primary position newB" (click)="toAddBook()" >Add Book</button>
     <form class="form-inline my-2 my-lg-0 set">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search books here" aria-label="Search" [(ngModel)]="searchTable" name="searchtable">
-      
+      <input class="form-control mr-sm-2 input_form" type="search" placeholder="Search books here" aria-label="Search" [(ngModel)]="searchTable" name="searchtable">
     </form>
   </div>
   <table class="table table-striped shadow scroll">

@@ -19,7 +19,7 @@ export class ServiceService {
   }
 
   updateBook(book: Book):Observable<any>{
-    return this.http.put<Book>('http://localhost:8080/updateBook', book);
+    return this.http.post<Book>('http://localhost:8080/updateBook', book);
   }
 
   getBookById(id: number){

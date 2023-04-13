@@ -18,8 +18,9 @@ export class BookListComponent {
 
   constructor(private service:ServiceService, private router: Router, private userService: UserServiceService){}
   searchTable: any;
+  
 
-  ngOnInit(){
+  ngOnInit(){  
 
     // this.service.getBookList().subscribe(
     //   data=>{console.log("Recieved sucessfully"),
@@ -36,6 +37,7 @@ export class BookListComponent {
       this.service.getBookList().subscribe(
       data=>{console.log("Recieved sucessfully"),
       this.booklist = data;
+      console.log(data);
     },
       error=>console.log("Exception occured")
     )
@@ -56,8 +58,6 @@ export class BookListComponent {
         this.booklist = data;
       })
       },
-    
-      
         error=> {console.log(error);
          })
   }

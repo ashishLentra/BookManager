@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 
-<form (ngSubmit)="addBookForm()" class="top2 shadow">
+<!-- <form (ngSubmit)="addBookForm()" class="top2 shadow">
     <div class="mb-3">
       <label class="form-label">Id</label>
       <input type="number" class="form-control" [(ngModel)]="book.id" name="id">
@@ -22,4 +22,50 @@
         <input type="number"  class="form-control"  [(ngModel)]="book.publicationYear" name="publicationYear">
     </div>
     <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
+  </form> -->
+
+
+
+  <div class="custom2">
+
+    <div class="form-bg custom">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
+                  <div class="form-container">
+                      <div class="form-icon">
+                        <img src="https://img.icons8.com/ios-filled/256/open-book.png" height="60" />
+                          <span><i class="fa fa-file-alt"></i></span>
+                      </div>
+                      <form class="form-horizontal" (ngSubmit)="addBookForm()">
+                          <h3 class="title">Add Book</h3>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Title" [(ngModel)]="book.title" name="title">
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Author" [(ngModel)]="book.author" name="author">
+                          </div>
+                          <div class="form-group">
+                              <input type="text" class="form-control" placeholder="Image Url" [(ngModel)]="book.imgUrl" name="imgUrl">
+                          </div>
+                          <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Publication Year" [(ngModel)]="book.publicationYear" name="publicationYear">
+                        </div>
+                          <div class="form-group">
+                              <button class="btn signup">Add</button>
+                          </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  
+  
+  <div class="custom3">
+    <img src="https://img.freepik.com/free-vector/realistic-book-lover-composition-with-stack-colorful-books-with-eyeglasses-home-plants-tea-cup-vector-illustration_1284-77312.jpg?w=996&t=st=1681297114~exp=1681297714~hmac=99b1e6983af4b77ee464a6b5dc9531a13569af0858096b26b5f6c66c16a34ce3" alt="">
+  </div>
+
+
+  </div>
+
