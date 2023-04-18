@@ -1,9 +1,11 @@
 export class Book {
 
-    id!: number;
-    title!: String;
-    imgUrl!: String;
-    author!: String;
-    publicationYear!: Number;
-
+    userId:number;
+    id: number;
+    title: string;
+    imgUrl: string;
+    author: string;
+    publicationYear: number;
+    price: number;
+    forSale: boolean;
 }

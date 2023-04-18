@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Book } from '../book';
-import { Form } from '@angular/forms';
+
 import { ServiceService } from '../service.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-book',
@@ -11,17 +11,19 @@ import { Router } from '@angular/router';
 })
 export class AddBookComponent {
 
-  book = new Book();
+  book:Book=new Book();
+  constructor(private service: ServiceService, private route:Router,private router:ActivatedRoute){};
 
-  constructor(private service: ServiceService, private route:Router){};
 
   ngOnInit(){
-
+    console.log(this.router.snapshot.params['id'],typeof this.router.snapshot.params['id'])
+    this.book.userId=this.router.snapshot.params['id'];
   }
 
   addBookForm(){
+    console.log(this.book);
     this.service.addBook(this.book).subscribe(
-      data=> {this.route.navigate(['book-list']);} ,
+      data=> {this.route.navigate(['book-list',this.book.userId]);} ,
       error=> console.log("exception occured")
     )
   }

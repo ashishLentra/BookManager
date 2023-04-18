@@ -24,7 +24,7 @@ export class UpdateBookComponent {
 
   updateBookForm(){
     this.service.updateBook(this.book).subscribe(
-      data=> this.route.navigate(['book-list']),
+      data=> this.route.navigate(['book-list', this.book.userId]),
       error=> console.log("error occured")
     )
   } 

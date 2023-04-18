@@ -1,0 +1,16 @@
+
+
+<h1>Books For Sale</h1>
+
+<div class="cardDiv">
+    <div *ngFor="let book of booklist" class="card shadow" style="width: 18rem;">
+        <img class="card-img-top" src="{{book.imgUrl}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{book.title}}</h5>
+          <p class="card-text">by {{book.author}}</p>
+          <p>Price: Rs {{book.price}}</p>
+          <a  class="btn btn-primary"  (click)="toViewBook(book.id)">View</a>&nbsp;
+          <a  class="btn btn-danger" (click)="buyBook(book.id)">Buy</a>
+        </div>
+      </div>
+</div>

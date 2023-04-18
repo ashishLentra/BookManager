@@ -22,13 +22,15 @@
       <th>TITLE</th>
       <th scope="col">AUTHOR</th>
       <th scope="col">PUBLICATION YEAR</th>
+      <th>Price</th>
       <th>ACTIONS</th>
+      <th>Sell</th>
 
     </tr>
     </thead>
     <tbody>
       <tr *ngIf="booklist.length ==0">
-        <td colspan="5" style="text-align: center"><h2>There are no books yet</h2></td>
+        <td colspan="8" style="text-align: center"><h2>There are no books yet</h2></td>
       </tr>
     <tr *ngFor="let book of booklist | filter: searchTable" >
       <th >{{book.id}}</th>
@@ -36,9 +38,13 @@
       <td>{{book.title}}</td>
       <td>{{book.author}}</td>
       <td>{{book.publicationYear}}</td>
+      <td>{{book.price}}</td>
       <td>
         <button type="button" class="btn btn-primary newB" (click)="toUpdateBook(book.id)">Edit</button>&nbsp;
         <button type="button" class="btn btn-danger" (click)="toDeleteBook(book.id)">Delete</button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger" *ngIf="!this.book.forSale"  (click)="toSellBook(book.id)">Sell</button>
       </td>
     </tr>
     </tbody>

@@ -27,7 +27,6 @@ export class SignupComponent {
     error=>{
       alert("Error exists");
     })
-    
 
   }
 

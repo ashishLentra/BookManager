@@ -19,7 +19,7 @@ export class ServiceService {
   }
 
   updateBook(book: Book):Observable<any>{
-    return this.http.post<Book>('http://localhost:8080/updateBook', book);
+    return this.http.put<Book>('http://localhost:8080/updateBook', book);
   }
 
   getBookById(id: number){
@@ -28,6 +28,15 @@ export class ServiceService {
 
   deleteBook(id: number){
      return this.http.delete<any>('http://localhost:8080/deleteBook/'+id);
+  }
+
+  getBooksByUserId(id:number)
+  {
+    return this.http.get<Book[]>(`http://localhost:8080/getBookByUserId/${id}`);
+  }
+
+  getBooksByForSale(forSale: boolean){
+    return this.http.get<Book[]>('http://localhost:8080/getBookByforSale/'+forSale);
   }
 
 

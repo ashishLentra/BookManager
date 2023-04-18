@@ -1,14 +1,19 @@
 <app-navbar></app-navbar>
 
+<h1>Trending Books</h1>
+
 <div class="set">
 
   <div class="cardDiv">
-  
+  <div *ngIf="booklist.length ==0">
+    <h3>There are no books yet!</h3>
+  </div>
       <div *ngFor="let book of booklist" class="card shadow" style="width: 18rem;">
           <img class="card-img-top" src="{{book.imgUrl}}" alt="Card image cap">
           <div class="card-body">
             <h5 class="card-title">{{book.title}}</h5>
-            <p class="card-text">{{book.author}}</p>
+            <p class="card-text">by {{book.author}}</p>
+            <p>Price: Rs {{book.price}}</p>
             <a  class="btn btn-primary"  (click)="toViewBook(book.id)">View</a>&nbsp;
             <!-- <a  class="btn btn-danger" (click)="toDeleteBook(book.id)">Delete</a> -->
           </div>
@@ -17,3 +22,5 @@
   </div>
 
 </div>
+
+<app-books-for-sale></app-books-for-sale>

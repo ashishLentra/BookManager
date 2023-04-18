@@ -11,6 +11,7 @@ import { UserServiceService } from '../user-service.service';
 export class LoginComponent {
     user:User=new User();
     arr:User[]=[];
+    id:number=-1;
     constructor(private route:Router,private service:UserServiceService){}
 
     Login()
@@ -24,7 +25,11 @@ export class LoginComponent {
           if(this.arr[i].email===this.user.email && this.arr[i].password===this.user.password)
           {
             sessionStorage.setItem('useremail',this.arr[i].email);
-            this.route.navigate(['book-list']);
+            sessionStorage.setItem('userid',this.arr[i].id.toString());
+            sessionStorage.setItem('token', this.arr[i].id.toString());
+            console.log(sessionStorage);
+            this.id=this.arr[i].id;
+            this.route.navigate(['book-list',this.id]);
             return;
           }
         }

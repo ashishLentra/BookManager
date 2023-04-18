@@ -1,8 +1,9 @@
+
 .cardDiv{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
-    padding-left: 72px;
+    padding-left: 162px;
     justify-content:baseline;
 }
 
@@ -17,8 +18,7 @@
     width: 90%
 }
 
+
 h1{
-    padding-left: 200px;
-    padding-top: 50px;
-    padding-bottom: 1px;
+    margin-left: 200px;
 }

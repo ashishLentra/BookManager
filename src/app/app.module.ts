@@ -14,6 +14,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { BooksForSaleComponent } from './books-for-sale/books-for-sale.component';
  
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     AllbooksComponent,
     NavbarComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    BooksForSaleComponent
   ],
   imports: [
     BrowserModule,

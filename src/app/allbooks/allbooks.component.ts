@@ -24,27 +24,9 @@ export class AllbooksComponent {
   }
 
 
-  // toAddBook(){
-  //   this.router.navigate(['/add-book']);
-  // }
-
-  // toUpdateBook(id: Number){
-  //   this.router.navigate(['update-book', id])
-  // }
-
-  // toDeleteBook(id: number){
-  //   this.service.deleteBook(id).subscribe(
-     
-  //     data=>{ console.log("cisabci");
-  //     this.router.navigate(['/book-list'])},
-      
-  //       error=> {console.log("error occuredd")}
-
-  //   )
-  // }
-      toViewBook(id: number){
-        this.router.navigate(['view', id]);
-      }
+  toViewBook(id: number){
+      this.router.navigate(['view', id]);
+  }
 
 
 }
